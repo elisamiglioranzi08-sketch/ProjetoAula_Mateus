@@ -106,8 +106,8 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
                 public void run() {
                     imgTocado1.setBackgroundColor(Color.WHITE);
                     imgTocado2.setBackgroundColor(Color.WHITE);
-                    imgTocado1.setImageResource(R.drawable.ic_action_name_2);
-                    imgTocado2.setImageResource(R.drawable.ic_action_name_2);
+                    //imgTocado1.setImageResource(R.drawable.ic_action_name_2);
+                    //imgTocado2.setImageResource(R.drawable.ic_action_name_2);
 
                 }
             }, 2000);
@@ -172,10 +172,10 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
 
     @Override
     public void run() {
-        img1.setImageResource(R.drawable.ic_action_name_2);
-        img2.setImageResource(R.drawable.ic_action_name_2);
-        img3.setImageResource(R.drawable.ic_action_name_2);
-        img4.setImageResource(R.drawable.ic_action_name_2);
+        //img1.setImageResource(R.drawable.ic_action_name_2);
+        //img2.setImageResource(R.drawable.ic_action_name_2);
+        //img3.setImageResource(R.drawable.ic_action_name_2);
+        //img4.setImageResource(R.drawable.ic_action_name_2);
 
 
 
