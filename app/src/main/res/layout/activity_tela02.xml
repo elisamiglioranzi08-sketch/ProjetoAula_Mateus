@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CDDC39"
+    android:background="#6954A2"
     android:orientation="vertical"
     tools:context=".Tela02">
 
@@ -27,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Nome"
+                android:textColor="#3E1F78"
                 android:textSize="24sp" />
 
             <EditText
@@ -35,7 +36,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#F4EEEE"
+                android:textColorLink="#F0E8E8" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Idade"
+                android:textColor="#3F2075"
                 android:textSize="24sp" />
 
             <EditText
@@ -65,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
+        android:background="#533890"
         android:gravity="center"
         android:orientation="vertical">
 

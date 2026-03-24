@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7C5CA4"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -16,16 +17,18 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_action_name" />
+            android:tint="#3F2B89"
+            app:srcCompat="@drawable/ic_action_name70" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
+        android:background="#513A8A"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -34,6 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Entrar"
-            android:textSize="34sp" />
+            android:textSize="34sp"
+            app:rippleColor="#FFFFFF"
+            app:strokeColor="#751F1F" />
     </LinearLayout>
 </LinearLayout>
