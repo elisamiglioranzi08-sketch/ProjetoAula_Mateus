@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,8 +25,23 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
     private ImageView imgTocado1, imgTocado2;
     private int imagemImgTocado1, imagemImgTocado2, contaToque;
     private Handler handler;
+    private Button btn1, btn2;
 
     private ArrayList<Integer> lista;
+
+    private void montarImagens(){
+
+        Collections.shuffle(lista);
+        img1.setImageResource(lista.get(0));
+        img2.setImageResource(lista.get(1));
+        img3.setImageResource(lista.get(2));
+        img4.setImageResource(lista.get(3));
+        img5.setImageResource(lista.get(4));
+        img6.setImageResource(lista.get(5));
+        img7.setImageResource(lista.get(6));
+        img8.setImageResource(lista.get(7));
+
+    }
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -60,15 +76,8 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
         lista.add(R.drawable.ic_action_name40);
         lista.add(R.drawable.ic_action_name50);
         lista.add(R.drawable.ic_action_name50);
-        Collections.shuffle(lista);
-        img1.setImageResource(lista.get(0));
-        img2.setImageResource(lista.get(1));
-        img3.setImageResource(lista.get(2));
-        img4.setImageResource(lista.get(3));
-        img5.setImageResource(lista.get(3));
-        img6.setImageResource(lista.get(3));
-        img7.setImageResource(lista.get(3));
-        img8.setImageResource(lista.get(3));
+
+        montarImagens();
 
         img1.setOnClickListener(this);
         img2.setOnClickListener(this);
@@ -84,6 +93,12 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
         contaToque = 0;
         imgTocado1 = new ImageView(this);
         imgTocado2 = new ImageView(this);
+
+        btn1 = findViewById(R.id.button3);
+        btn1.setOnClickListener(this);
+
+        btn2 = findViewById(R.id.button4);
+        btn2.setOnClickListener(this);
 
     }
 
@@ -106,8 +121,8 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
                 public void run() {
                     imgTocado1.setBackgroundColor(Color.WHITE);
                     imgTocado2.setBackgroundColor(Color.WHITE);
-                    //imgTocado1.setImageResource(R.drawable.ic_action_name_2);
-                    //imgTocado2.setImageResource(R.drawable.ic_action_name_2);
+                    imgTocado1.setImageResource(R.drawable.ic_action_name90);
+                    imgTocado2.setImageResource(R.drawable.ic_action_name90);
 
                 }
             }, 2000);
@@ -168,14 +183,71 @@ public class Tela03 extends AppCompatActivity implements View.OnClickListener, R
                 compara(imagemImgTocado1,imagemImgTocado2);
             }
         }
+        if(view == img5){
+            img5.setImageResource(lista.get(4));
+            if(contaToque == 1)
+            {
+                imgTocado1 = img5;
+                imagemImgTocado1 = lista.get(4);
+            }else {
+                imgTocado2 = img5;
+                imagemImgTocado2 = lista.get(4);
+                compara(imagemImgTocado1,imagemImgTocado2);
+            }
+        }
+        if(view == img6){
+            img6.setImageResource(lista.get(5));
+            if(contaToque == 1)
+            {
+                imgTocado1 = img6;
+                imagemImgTocado1 = lista.get(5);
+            }else {
+                imgTocado2 = img6;
+                imagemImgTocado2 = lista.get(5);
+                compara(imagemImgTocado1,imagemImgTocado2);
+            }
+        }
+        if(view == img7){
+            img7.setImageResource(lista.get(6));
+            if(contaToque == 1)
+            {
+                imgTocado1 = img7;
+                imagemImgTocado1 = lista.get(6);
+            }else {
+                imgTocado2 = img4;
+                imagemImgTocado2 = lista.get(6);
+                compara(imagemImgTocado1,imagemImgTocado2);
+            }
+        }
+        if(view == img8){
+            img4.setImageResource(lista.get(7));
+            if(contaToque == 1)
+            {
+                imgTocado1 = img8;
+                imagemImgTocado1 = lista.get(7);
+            }else {
+                imgTocado2 = img8;
+                imagemImgTocado2 = lista.get(7);
+                compara(imagemImgTocado1,imagemImgTocado2);
+            }
+        }
+
+        if(view == btn1){
+            Intent i = new Intent(this, Tela02.class);
+            startActivity(i);
+        }
     }
 
     @Override
     public void run() {
-        //img1.setImageResource(R.drawable.ic_action_name_2);
-        //img2.setImageResource(R.drawable.ic_action_name_2);
-        //img3.setImageResource(R.drawable.ic_action_name_2);
-        //img4.setImageResource(R.drawable.ic_action_name_2);
+        img1.setImageResource(R.drawable.ic_action_name90);
+        img2.setImageResource(R.drawable.ic_action_name90);
+        img3.setImageResource(R.drawable.ic_action_name90);
+        img4.setImageResource(R.drawable.ic_action_name90);
+        img5.setImageResource(R.drawable.ic_action_name90);
+        img6.setImageResource(R.drawable.ic_action_name90);
+        img7.setImageResource(R.drawable.ic_action_name90);
+        img8.setImageResource(R.drawable.ic_action_name90);
 
 
 
